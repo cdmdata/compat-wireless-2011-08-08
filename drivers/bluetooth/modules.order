@@ -1,0 +1,10 @@
+kernel//home/rszuminski/Development/compat-wireless-2011-08-08/drivers/bluetooth/hci_vhci.ko
+kernel//home/rszuminski/Development/compat-wireless-2011-08-08/drivers/bluetooth/hci_uart.ko
+kernel//home/rszuminski/Development/compat-wireless-2011-08-08/drivers/bluetooth/bcm203x.ko
+kernel//home/rszuminski/Development/compat-wireless-2011-08-08/drivers/bluetooth/bpa10x.ko
+kernel//home/rszuminski/Development/compat-wireless-2011-08-08/drivers/bluetooth/bfusb.ko
+kernel//home/rszuminski/Development/compat-wireless-2011-08-08/drivers/bluetooth/btusb.ko
+kernel//home/rszuminski/Development/compat-wireless-2011-08-08/drivers/bluetooth/btsdio.ko
+kernel//home/rszuminski/Development/compat-wireless-2011-08-08/drivers/bluetooth/ath3k.ko
+kernel//home/rszuminski/Development/compat-wireless-2011-08-08/drivers/bluetooth/btmrvl.ko
+kernel//home/rszuminski/Development/compat-wireless-2011-08-08/drivers/bluetooth/btmrvl_sdio.ko

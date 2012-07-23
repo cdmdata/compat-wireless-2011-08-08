@@ -1,0 +1,13 @@
+modules="compat cfg80211 mac80211 wl12xx wl12xx_sdio bluetooth hci_uart bnep rfcomm hidp"
+for m in $modules ; do
+	find . -type f -name ${m}.ko -exec cp -fv {} /media/BOOT/lib/modules/ \; ;
+	# find . -type f -name ${m}.ko -exec adb push {} /boot/lib/modules/ \; ;
+done
+modules="ipu_csi_enc ipu_prp_enc ipu_prp_vf_sdc_bg ipu_prp_vf_sdc ipu_still mxc_v4l2_capture ov5642_camera"
+for m in $modules ; do
+	find . -type f -name ${m}.ko -exec cp -fv {} /media/BOOT/lib/modules/ \; ;
+	# find . -type f -name ${m}.ko -exec adb push {} /boot/lib/modules/ \; ;
+done
+
+devregs GPIO2_DR:2 1
+

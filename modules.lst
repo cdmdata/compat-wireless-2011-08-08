@@ -1,0 +1,5 @@
+./drivers/net/wireless/wl12xx/wl12xx.ko
+./drivers/net/wireless/wl12xx/wl12xx_sdio.ko
+./net/mac80211/mac80211.ko
+./net/wireless/cfg80211.ko
+./compat/compat.ko

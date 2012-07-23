@@ -1,0 +1,1 @@
+cmd_/home/rszuminski/Development/compat-wireless-2011-08-08/drivers/net/wireless/wl1251/wl1251_sdio.o := arm-eabi-ld -EL    -r -o /home/rszuminski/Development/compat-wireless-2011-08-08/drivers/net/wireless/wl1251/wl1251_sdio.o /home/rszuminski/Development/compat-wireless-2011-08-08/drivers/net/wireless/wl1251/sdio.o 

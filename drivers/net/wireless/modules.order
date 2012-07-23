@@ -1,0 +1,7 @@
+kernel//home/rszuminski/Development/compat-wireless-2011-08-08/drivers/net/wireless/wl12xx/wl12xx.ko
+kernel//home/rszuminski/Development/compat-wireless-2011-08-08/drivers/net/wireless/wl12xx/wl12xx_spi.ko
+kernel//home/rszuminski/Development/compat-wireless-2011-08-08/drivers/net/wireless/wl12xx/wl12xx_sdio.ko
+kernel//home/rszuminski/Development/compat-wireless-2011-08-08/drivers/net/wireless/wl12xx/wl12xx_sdio_test.ko
+kernel//home/rszuminski/Development/compat-wireless-2011-08-08/drivers/net/wireless/wl1251/wl1251.ko
+kernel//home/rszuminski/Development/compat-wireless-2011-08-08/drivers/net/wireless/wl1251/wl1251_spi.ko
+kernel//home/rszuminski/Development/compat-wireless-2011-08-08/drivers/net/wireless/wl1251/wl1251_sdio.ko

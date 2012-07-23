@@ -1,0 +1,1 @@
+cmd_/home/rszuminski/Development/compat-wireless-2011-08-08/drivers/bluetooth/btmrvl.o := arm-eabi-ld -EL    -r -o /home/rszuminski/Development/compat-wireless-2011-08-08/drivers/bluetooth/btmrvl.o /home/rszuminski/Development/compat-wireless-2011-08-08/drivers/bluetooth/btmrvl_main.o /home/rszuminski/Development/compat-wireless-2011-08-08/drivers/bluetooth/btmrvl_debugfs.o 

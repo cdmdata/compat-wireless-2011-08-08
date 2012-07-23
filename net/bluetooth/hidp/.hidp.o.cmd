@@ -1,0 +1,1 @@
+cmd_/home/rszuminski/Development/compat-wireless-2011-08-08/net/bluetooth/hidp/hidp.o := arm-eabi-ld -EL    -r -o /home/rszuminski/Development/compat-wireless-2011-08-08/net/bluetooth/hidp/hidp.o /home/rszuminski/Development/compat-wireless-2011-08-08/net/bluetooth/hidp/core.o /home/rszuminski/Development/compat-wireless-2011-08-08/net/bluetooth/hidp/sock.o 
