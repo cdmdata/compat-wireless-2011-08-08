@@ -173,10 +173,11 @@ static int wl1271_boot_upload_firmware_chunk(struct wl1271 *wl, void *buf,
 
 	/* whal_FwCtrl_LoadFwImageSm() */
 
-	wl1271_error("starting firmware upload");
+	/* wl1271_error("starting firmware upload");
 
 	wl1271_error("fw_data_len %zd chunk_size %d",
 		     fw_data_len, CHUNK_SIZE);
+	*/
 
 	if ((fw_data_len % 4) != 0) {
 		wl1271_error("firmware length not multiple of four");
@@ -212,8 +213,8 @@ static int wl1271_boot_upload_firmware_chunk(struct wl1271 *wl, void *buf,
 		addr = dest + chunk_num * CHUNK_SIZE;
 		p = buf + chunk_num * CHUNK_SIZE;
 		memcpy(chunk, p, CHUNK_SIZE);
-		wl1271_error( "uploading fw chunk 0x%p to 0x%x",
-			     p, addr);
+		/* wl1271_error( "uploading fw chunk 0x%p to 0x%x",
+			     p, addr); */
 		wl1271_write(wl, addr, chunk, CHUNK_SIZE, false);
 
 		chunk_num++;
@@ -223,8 +224,8 @@ static int wl1271_boot_upload_firmware_chunk(struct wl1271 *wl, void *buf,
 	addr = dest + chunk_num * CHUNK_SIZE;
 	p = buf + chunk_num * CHUNK_SIZE;
 	memcpy(chunk, p, fw_data_len % CHUNK_SIZE);
-	wl1271_error( "uploading fw last chunk (%zd B) 0x%p to 0x%x",
-		     fw_data_len % CHUNK_SIZE, p, addr);
+	/* wl1271_error( "uploading fw last chunk (%zd B) 0x%p to 0x%x",
+		     fw_data_len % CHUNK_SIZE, p, addr); */
 	wl1271_write(wl, addr, chunk, fw_data_len % CHUNK_SIZE, false);
 
 	kfree(chunk);
@@ -253,8 +254,8 @@ static int wl1271_boot_upload_firmware(struct wl1271 *wl)
 			wl1271_info("firmware chunk too long: %u", len);
 			return -EINVAL;
 		}
-		wl1271_error( "chunk %d addr 0x%x len %u",
-			     chunks, addr, len);
+		/* wl1271_error( "chunk %d addr 0x%x len %u",
+		     chunks, addr, len); */
 		ret = wl1271_boot_upload_firmware_chunk(wl, fw, len, addr);
 		if (ret != 0)
 			break;
@@ -361,9 +362,9 @@ static int wl1271_boot_upload_nvs(struct wl1271 *wl)
 			val = (nvs_ptr[0] | (nvs_ptr[1] << 8)
 			       | (nvs_ptr[2] << 16) | (nvs_ptr[3] << 24));
 
-			wl1271_error(
+			/* wl1271_error(
 				     "nvs burst write 0x%x: 0x%x",
-				     dest_addr, val);
+				     dest_addr, val); */
 			wl1271_write32(wl, dest_addr, val);
 
 			nvs_ptr += 4;
@@ -449,7 +450,7 @@ static int wl1271_boot_run_firmware(struct wl1271 *wl)
 
 	chip_id = wl1271_read32(wl, CHIP_ID_B);
 
-	wl1271_error( "chip id after firmware boot: 0x%x", chip_id);
+	/* wl1271_error( "chip id after firmware boot: 0x%x", chip_id); */
 
 	if (chip_id != wl->chip.id) {
 		wl1271_error("chip id doesn't match after firmware boot");
@@ -490,8 +491,8 @@ static int wl1271_boot_run_firmware(struct wl1271 *wl)
 	/* set the working partition to its "running" mode offset */
 	wl1271_set_partition(wl, &part_table[PART_WORK]);
 
-	wl1271_error("cmd_box_addr 0x%x event_box_addr 0x%x",
-		     wl->cmd_box_addr, wl->event_box_addr);
+	/* wl1271_error("cmd_box_addr 0x%x event_box_addr 0x%x",
+		     wl->cmd_box_addr, wl->event_box_addr); */
 
 	wl1271_boot_fw_version(wl);
 
@@ -734,7 +735,7 @@ static int wl127x_boot_clk(struct wl1271 *wl)
 
 	pause = wl1271_read32(wl, PLL_PARAMETERS);
 
-	wl1271_error( "pause1 0x%x", pause);
+	/* wl1271_error( "pause1 0x%x", pause); */
 
 	pause &= ~(WU_COUNTER_PAUSE_VAL);
 	pause |= WU_COUNTER_PAUSE_VAL;
@@ -770,7 +771,7 @@ printk (KERN_ERR "%s\n", __func__);
 	   to be used by DRPw FW. The RTRIM value will be added by the FW
 	   before taking DRPw out of reset */
 
-	wl1271_error( "DRPW_SCRATCH_START %08x", DRPW_SCRATCH_START);
+	// wl1271_error( "DRPW_SCRATCH_START %08x", DRPW_SCRATCH_START);
 	clk = wl1271_read32(wl, DRPW_SCRATCH_START);
 
 	wl1271_error( "clk2 0x%x", clk);
